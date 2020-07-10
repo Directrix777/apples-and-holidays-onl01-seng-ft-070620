@@ -63,10 +63,11 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{season.capitalize}:"
     secondary_hash.each do |holiday, supplies|
       print "#{holiday.capitalize}: "
+      string = ""
       supplies.each do |supply|
-        print "#{supply}, "
+        string += "#{supply}"
+        string += ", " unless supplies.index(supply) == -1
       end
-      puts ""
     end
   end
 end
