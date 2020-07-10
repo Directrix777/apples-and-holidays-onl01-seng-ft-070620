@@ -61,9 +61,8 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   holiday_hash.each do |season, secondary_hash|
     puts "#{season.capitalize}:"
-    string = ""
     secondary_hash.each do |holiday, supplies|
-      string += "  #{holiday.capitalize}: "
+      string = "  #{holiday.capitalize}: "
       supplies.each do |supply|
         string += "#{supply}"
         string += ", " unless supplies.index(supply) == supplies.size - 1
